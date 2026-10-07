@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+.vs/
+.vscode/
+artifacts/
+.azure-state.json
+.env
+*.user
+*.suo
+**/appsettings.Local.json

@@ -1,0 +1,11 @@
+DIMDIM — MATEUS TENI PIERRO — RM 555125
+
+1. Extraia o ZIP inteiro.
+2. Leia o README.md: contém o tutorial completo.
+3. No PowerShell, faça az login e execute os scripts na ordem indicada.
+4. Grave o vídeo com cada CRUD e SELECT, e publique o repositório.
+5. Atualize os links e gere novamente o PDF na pasta entrega.
+
+O projeto não foi compilado ou implantado neste ambiente. O script 00-validar.ps1 realiza a compilação no seu computador, e o provisionamento só continua se ela passar.
+
+O PDF incluído é um modelo com links pendentes, não uma entrega final. Nome de grupo presumido: MateusPierro. Ajuste se necessário.

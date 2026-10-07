@@ -1,0 +1,3 @@
+@model Cliente
+@{ ViewData["Title"] = "Detalhes"; }
+<h1>Detalhes do registro #@Model.Id</h1><div class="card form"><dl><dt>Nome</dt><dd>@Model.Nome</dd><dt>E-mail</dt><dd>@Model.Email</dd><dt>CPF</dt><dd>@Model.Cpf</dd></dl><div class="actions"><a class="button" asp-action="Edit" asp-route-id="@Model.Id">Editar</a><a asp-action="Index">Voltar</a></div></div>

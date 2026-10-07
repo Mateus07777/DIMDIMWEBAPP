@@ -1,0 +1,5 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>@ViewData["Title"] • DimDim</title><link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /></head>
+<body><header><a class="brand" asp-controller="Home" asp-action="Index">dim<span>dim</span><small>GESTÃO BANCÁRIA</small></a><nav aria-label="Principal"><a asp-controller="Home" asp-action="Index">Visão geral</a><a asp-controller="Clientes" asp-action="Index">Clientes</a><a asp-controller="Contas" asp-action="Index">Contas</a></nav></header>
+<main>@if (TempData["Sucesso"] != null) { <div class="notice" role="status">@TempData["Sucesso"]</div> }@if (TempData["Aviso"] != null) { <div class="notice warn" role="alert">@TempData["Aviso"]</div> }@RenderBody()</main>
+<footer>DimDim • Projeto acadêmico • Mateus Teni Pierro / RM 555125</footer></body></html>

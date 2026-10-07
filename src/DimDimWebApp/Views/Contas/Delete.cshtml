@@ -1,0 +1,4 @@
+@model Conta
+@{ ViewData["Title"] = "Excluir"; }
+<h1>Excluir registro #@Model.Id?</h1><div class="card form"><p>Esta operação remove o registro do banco.</p><dl><dt>Número</dt><dd>@Model.Numero</dd><dt>Tipo</dt><dd>@Model.Tipo</dd><dt>Saldo</dt><dd>@Model.Saldo.ToString("C")</dd><dt>Cliente</dt><dd>@Model.Cliente?.Nome</dd></dl>
+<form asp-action="Delete" asp-route-id="@Model.Id" method="post"><input type="hidden" asp-for="Id" /><div class="actions"><button class="button danger" type="submit">Confirmar exclusão</button><a asp-action="Index">Cancelar</a></div></form></div>

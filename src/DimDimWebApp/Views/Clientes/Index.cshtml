@@ -1,0 +1,8 @@
+@model IEnumerable<Cliente>
+@{ ViewData["Title"] = "Clientes"; }
+<div class="section-head"><div><p class="eyebrow">GESTÃO DIMDIM</p><h1>Clientes</h1></div><a class="button" asp-action="Create">+ Novo registro</a></div>
+<div class="card"><table><thead><tr><th>ID</th><th>Nome</th><th>E-mail</th><th>CPF</th><th>Ações</th></tr></thead><tbody>
+@foreach (var item in Model) {
+<tr><td>@item.Id</td><td>@item.Nome</td><td>@item.Email</td><td>@item.Cpf</td><td class="actions"><a asp-action="Details" asp-route-id="@item.Id">Ver</a><a asp-action="Edit" asp-route-id="@item.Id">Editar</a><a asp-action="Delete" asp-route-id="@item.Id">Excluir</a></td></tr>
+}
+</tbody></table>@if (!Model.Any()) { <p class="empty">Nenhum registro. Comece pelo botão acima.</p> }</div>

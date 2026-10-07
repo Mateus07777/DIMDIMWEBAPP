@@ -1,0 +1,8 @@
+@model Cliente
+@{ ViewData["Title"] = "Novo registro"; }
+<p class="eyebrow">CLIENTES</p><h1>Novo registro</h1>
+<form class="card form" asp-action="Create" method="post">
+<div asp-validation-summary="All" class="validation"></div>
+<partial name="_Fields" model="Model" />
+<div class="actions"><button class="button" type="submit">Salvar</button><a asp-action="Index">Voltar</a></div>
+</form>

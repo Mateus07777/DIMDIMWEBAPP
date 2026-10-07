@@ -1,0 +1,21 @@
+// Application Insights > Logs: execute cada bloco separadamente.
+requests
+| where timestamp > ago(1h)
+| project timestamp, name, resultCode, success, duration
+| order by timestamp desc
+
+// Dependências SQL (destino e duração; texto da consulta pode não ser coletado).
+dependencies
+| where timestamp > ago(1h) and type contains "SQL"
+| project timestamp, name, target, type, success, duration
+| order by timestamp desc
+
+traces
+| where timestamp > ago(1h) and message startswith "CRUD"
+| project timestamp, message, severityLevel
+| order by timestamp desc
+
+exceptions
+| where timestamp > ago(1h)
+| project timestamp, type, outerMessage
+| order by timestamp desc

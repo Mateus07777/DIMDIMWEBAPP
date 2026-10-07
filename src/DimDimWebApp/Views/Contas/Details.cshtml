@@ -1,0 +1,3 @@
+@model Conta
+@{ ViewData["Title"] = "Detalhes"; }
+<h1>Detalhes do registro #@Model.Id</h1><div class="card form"><dl><dt>Número</dt><dd>@Model.Numero</dd><dt>Tipo</dt><dd>@Model.Tipo</dd><dt>Saldo</dt><dd>@Model.Saldo.ToString("C")</dd><dt>Cliente</dt><dd>@Model.Cliente?.Nome</dd></dl><div class="actions"><a class="button" asp-action="Edit" asp-route-id="@Model.Id">Editar</a><a asp-action="Index">Voltar</a></div></div>

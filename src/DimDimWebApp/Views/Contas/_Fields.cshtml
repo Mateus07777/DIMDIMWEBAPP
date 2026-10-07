@@ -1,0 +1,5 @@
+@model Conta
+<div class="field"><label asp-for="Numero">Número</label><input asp-for="Numero" /><span asp-validation-for="Numero" class="validation"></span></div>
+<div class="field"><label asp-for="Tipo">Tipo</label><select asp-for="Tipo"><option>Corrente</option><option>Poupança</option></select><span asp-validation-for="Tipo" class="validation"></span></div>
+<div class="field"><label asp-for="Saldo">Saldo</label><input asp-for="Saldo" type="text" inputmode="decimal" placeholder="Ex.: 1500,50" /><span asp-validation-for="Saldo" class="validation"></span></div>
+<div class="field"><label asp-for="ClienteId">Cliente</label><select asp-for="ClienteId" asp-items="ViewBag.ClienteId"><option value="">Selecione um cliente</option></select><span asp-validation-for="ClienteId" class="validation"></span></div>

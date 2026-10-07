@@ -1,0 +1,8 @@
+@model Conta
+@{ ViewData["Title"] = "Editar registro"; }
+<p class="eyebrow">CONTAS</p><h1>Editar registro</h1>
+<form class="card form" asp-action="Edit" method="post">
+<input type="hidden" asp-for="Id" /><div asp-validation-summary="All" class="validation"></div>
+<partial name="_Fields" model="Model" />
+<div class="actions"><button class="button" type="submit">Salvar</button><a asp-action="Index">Voltar</a></div>
+</form>
